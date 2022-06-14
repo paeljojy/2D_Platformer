@@ -1,0 +1,31 @@
+﻿<Project Sdk="Godot.NET.Sdk/3.3.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Tools</Configuration>
+    <ProjectGuid>{0842FAA2-BA6B-4B3C-B5FF-0FC823526FFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DynamicCharacterControlBasedPlatformer</RootNamespace>
+    <AssemblyName>Dynamic Character Control-Based Platformer</AssemblyName>
+    <GodotProjectGeneratorVersion>1.0.7333.4679</GodotProjectGeneratorVersion>
+    <TargetFramework>net472</TargetFramework>
+    <!--The following properties were overridden during migration to prevent errors.
+    Enabling them may require other manual changes to the project and its files.-->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="coin\Coin.cs" />
+    <Compile Include="enemy\Enemy.cs" />
+    <Compile Include="platform\MovingPlatform.cs" />
+    <Compile Include="player\Bullet.cs" />
+    <Compile Include="player\FloorContact.cs" />
+    <Compile Include="player\Player.cs" />
+    <Compile Include="player\PlayerInputInteraction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="world\LevelGoal.cs" />
+    <Compile Include="world\SwitchDirectionWall.cs" />
+  </ItemGroup>
+</Project>
