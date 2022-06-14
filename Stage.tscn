@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://coin/Coin.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://background/ParallaxBg.tscn" type="PackedScene" id=8]
 [ext_resource path="res://world/SwitchDirectionWall.tscn" type="PackedScene" id=9]
 [ext_resource path="res://world/LevelGoal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Stage2.tscn" type="PackedScene" id=11]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -180,11 +181,6 @@ position = Vector2( 624.824, 545.544 )
 motion = Vector2( 300, 0 )
 cycle = 10.0
 
-[node name="MovingPlatform 6" parent="Props" instance=ExtResource( 3 )]
-position = Vector2( 36.7741, 1056.91 )
-motion = Vector2( 300, 0 )
-cycle = 10.0
-
 [node name="MovingPlatform 3" parent="Props" instance=ExtResource( 3 )]
 position = Vector2( 3423.22, 739.662 )
 motion = Vector2( 450, 0 )
@@ -207,7 +203,7 @@ position = Vector2( 2402.79, 849.52 )
 position = Vector2( 927.698, 1120.81 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 251.684, 1045.6 )
+position = Vector2( 270.495, 1062.19 )
 physics_material_override = SubResource( 1 )
 
 [node name="Enemies" type="Node" parent="."]
@@ -258,96 +254,86 @@ physics_material_override = SubResource( 12 )
 
 [node name="ParallaxBg" parent="." instance=ExtResource( 8 )]
 
-[node name="Label" type="Label" parent="."]
-margin_left = 12.0
-margin_top = -202.0
-margin_right = 358.0
-margin_bottom = -10.0
-size_flags_horizontal = 2
-size_flags_vertical = 0
-text = "This is a simple demo on how to make a platformer game with Godot.\"This version uses physics and the 2D physics engine for motion and collision.\"\"The demo also shows the benefits of using the scene system, where coins,\"enemies and the player are edited separatedly and instanced in the stage.\"\"To edit the base tiles for the  tileset, open the tileset_edit.tscn file and follow \"instructions.\""
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Goal3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 4251.28, 600.675 )
+nextLevel = ExtResource( 11 )
 
-[node name="SwitchDirectionWall4" parent="." instance=ExtResource( 9 )]
+[node name="WallsThatSwitchMovementDirection" type="Node" parent="."]
+
+[node name="SwitchDirectionWall4" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 1569, 1443 )
 
-[node name="SwitchDirectionWall10" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall10" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 1599.9, 1029.38 )
 scale = Vector2( 2.12, 0.32 )
 
-[node name="SwitchDirectionWall17" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall17" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 1856.29, 907.542 )
 scale = Vector2( 2.12, 0.32 )
 
-[node name="SwitchDirectionWall12" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall12" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 2400.67, 966.288 )
 scale = Vector2( 3.36, 0.36 )
 
-[node name="SwitchDirectionWall13" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall13" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 2175.18, 970.783 )
 scale = Vector2( 2.28001, 0.36 )
 
-[node name="SwitchDirectionWall14" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall14" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 2112.25, 1109.63 )
 scale = Vector2( 2.25988, 2.27653 )
 
-[node name="SwitchDirectionWall15" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall15" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 2686.54, 998.978 )
 scale = Vector2( 2.17988, 0.996526 )
 
-[node name="SwitchDirectionWall11" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall11" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 3419.97, 1228.1 )
 scale = Vector2( 1, 1.72 )
 
-[node name="SwitchDirectionWall16" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall16" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 3996.96, 917.765 )
 scale = Vector2( 1, 1.32 )
 
-[node name="SwitchDirectionWall18" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall18" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 3742.96, 1171.28 )
 scale = Vector2( 1, 1.32 )
 
-[node name="SwitchDirectionWall20" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall20" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 3489.76, 1171.28 )
 scale = Vector2( 1, 1.32 )
 
-[node name="SwitchDirectionWall19" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall19" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 3863.96, 1046.83 )
 scale = Vector2( 1, 1.32 )
 
-[node name="SwitchDirectionWall5" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall5" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 34, 985 )
 
-[node name="SwitchDirectionWall" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 417.222, 1243.14 )
 
-[node name="SwitchDirectionWall2" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall2" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 704.263, 1349.15 )
 scale = Vector2( 2.2, 0.36 )
 
-[node name="SwitchDirectionWall6" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall6" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 964.592, 1438.53 )
 scale = Vector2( 2.28, 1 )
 
-[node name="SwitchDirectionWall7" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall7" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 1028.25, 1375.66 )
 scale = Vector2( 2.28, 1 )
 
-[node name="SwitchDirectionWall8" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall8" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 1151.43, 1288.69 )
 scale = Vector2( 2.28, 1 )
 
-[node name="SwitchDirectionWall9" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall9" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 735.808, 1051.52 )
 scale = Vector2( 3.31607, 0.440005 )
 
-[node name="Goal" parent="." instance=ExtResource( 10 )]
-position = Vector2( 4266.06, 589.358 )
-
-[node name="SwitchDirectionWall3" parent="." instance=ExtResource( 9 )]
+[node name="SwitchDirectionWall3" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 2367.57, 645.37 )
 scale = Vector2( 2.19615, 0.320002 )
 

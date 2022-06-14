@@ -14,7 +14,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Dynamic Character Control-Based Platformer"
+config/name="2D_Platformer"
+config/description="Basic 2D platformer, with a twist, only one keybind!"
 run/main_scene="res://Stage.tscn"
 config/icon="res://icon.png"
 

@@ -26,7 +26,7 @@ public class Player : RigidBody2D
     private PackedScene enemyScene;
     private float InputHeldTime;
     private bool InputIsPressed;
-    private bool bShouldMoveLeft = true;
+    private bool bShouldMoveLeft;
     private float InputPressedAtTime;
     private ulong bLastChangedDirectionTime;
 
@@ -134,7 +134,7 @@ public class Player : RigidBody2D
         {
             if (bodyState.GetContactColliderObject(i) is SwitchDirectionWall wall)
             {
-                GD.Print(wall.Name);
+                // GD.Print(wall.Name);
                 // EmitSignal("Collided", coll);
 
                 // Temporary regex check to check for walls that will switch our movement direction
