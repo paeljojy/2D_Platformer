@@ -3,7 +3,7 @@
 ## Controls:
 
 ### Desktop
-SPACE (and hold): Jump
+SPACE/Arrow UP/W (and hold): Jump
 
 ### Mobile
 TAP (and hold): Jump
