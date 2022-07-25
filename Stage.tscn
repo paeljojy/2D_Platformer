@@ -1,13 +1,13 @@
 [gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Tilesets/Dungeon_Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://coin/Coin.tscn" type="PackedScene" id=2]
 [ext_resource path="res://platform/MovingPlatform.tscn" type="PackedScene" id=3]
-[ext_resource path="res://background/Seesaw.tscn" type="PackedScene" id=4]
+[ext_resource path="res://background/Example/Seesaw.tscn" type="PackedScene" id=4]
 [ext_resource path="res://platform/OneWayPlatform.tscn" type="PackedScene" id=5]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://enemy/Enemy.tscn" type="PackedScene" id=7]
-[ext_resource path="res://background/ParallaxBg.tscn" type="PackedScene" id=8]
+[ext_resource path="res://background/Example/ParallaxBg.tscn" type="PackedScene" id=8]
 [ext_resource path="res://world/SwitchDirectionWall.tscn" type="PackedScene" id=9]
 [ext_resource path="res://world/LevelGoal.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Stage2.tscn" type="PackedScene" id=11]
@@ -203,13 +203,13 @@ position = Vector2( 2402.79, 849.52 )
 position = Vector2( 927.698, 1120.81 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 270.495, 1062.19 )
+position = Vector2( 106.993, 1058.22 )
 physics_material_override = SubResource( 1 )
 
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Enemy1" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( 834.664, 1309.6 )
+position = Vector2( 835.136, 1309.6 )
 physics_material_override = SubResource( 2 )
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 7 )]
@@ -235,6 +235,10 @@ physics_material_override = SubResource( 7 )
 [node name="Enemy7" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( 1457.6, 688.741 )
 physics_material_override = SubResource( 8 )
+
+[node name="SwitchDirectionWall" parent="Enemies/Enemy7" instance=ExtResource( 9 )]
+position = Vector2( 1965.79, -46.5709 )
+scale = Vector2( 3.33996, 0.27586 )
 
 [node name="Enemy8" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( 1193.63, 460.381 )
@@ -311,7 +315,7 @@ scale = Vector2( 1, 1.32 )
 position = Vector2( 34, 985 )
 
 [node name="SwitchDirectionWall" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
-position = Vector2( 417.222, 1243.14 )
+position = Vector2( 417.538, 1249.26 )
 
 [node name="SwitchDirectionWall2" parent="WallsThatSwitchMovementDirection" instance=ExtResource( 9 )]
 position = Vector2( 704.263, 1349.15 )

@@ -91,8 +91,10 @@ mipmap_policy=1
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=1
+vram_compression/import_etc=true
 quality/filters/anisotropic_filter_level=2
 quality/filters/use_nearest_mipmap_filter=true
 quality/depth/hdr=false

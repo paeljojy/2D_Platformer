@@ -17,5 +17,5 @@ texture = ExtResource( 2 )
 polygon = PoolVector2Array( -88, -24, 88, -24, 88, 24, -88, 24 )
 
 [node name="SwitchDirectionWall" parent="Platform" instance=ExtResource( 3 )]
-position = Vector2( 67.0671, 5.3317 )
-scale = Vector2( 1, 0.12 )
+position = Vector2( 65.8779, 2.35868 )
+scale = Vector2( 1, 0.0799999 )

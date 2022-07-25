@@ -19,7 +19,7 @@ public class LevelGoal : Area2D
             this.Reached = true;
             AnimationPlayer animationPlayer = GetNode("Anim") as AnimationPlayer;
             animationPlayer.Play("Reached");
-            GD.Print("GOAL REACHED!");
+            // GD.Print("GOAL REACHED!");
             GetTree().ChangeScene(nextLevel.ResourcePath);
         }
     }
