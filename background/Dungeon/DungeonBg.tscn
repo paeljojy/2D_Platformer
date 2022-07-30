@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://background/Dungeon/dungeon_bg_sky.png" type="Texture" id=1]
+[ext_resource path="res://background/Dungeon/bat.png" type="Texture" id=2]
+[ext_resource path="res://background/Dungeon/dungeon_bg_spikes.png" type="Texture" id=3]
+
+[node name="ParallaxBg" type="ParallaxBackground"]
+scroll_base_scale = Vector2( 0.7, 0 )
+
+[node name="Sky" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 800, 0 )
+
+[node name="Sprite" type="Sprite" parent="Sky"]
+position = Vector2( -1.19055, -0.793701 )
+scale = Vector2( 32, 0.94 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Bats1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 800, 0 )
+
+[node name="Sprite4" type="Sprite" parent="Bats1"]
+position = Vector2( 559.526, 110.554 )
+rotation = 0.78608
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Sprite5" type="Sprite" parent="Bats1"]
+position = Vector2( 300.436, 110.782 )
+rotation = 0.512778
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Sprite6" type="Sprite" parent="Bats1"]
+position = Vector2( 674, 69.6031 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Bats2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.45, 1 )
+motion_mirroring = Vector2( 800, 0 )
+
+[node name="Sprite1" type="Sprite" parent="Bats2"]
+position = Vector2( 28, 127 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="Bats2"]
+position = Vector2( 403.206, 24 )
+texture = ExtResource( 2 )
+centered = false
+flip_h = true
+flip_v = true
+
+[node name="Sprite3" type="Sprite" parent="Bats2"]
+position = Vector2( 154, 45.6031 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Mount2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 1050, 0 )
+
+[node name="Sprite" type="Sprite" parent="Mount2"]
+position = Vector2( 1.18921, 54.435 )
+scale = Vector2( 1, 1.67822 )
+texture = ExtResource( 3 )
+centered = false
+region_rect = Rect2( 0, 0, 800, 256 )
+
+[node name="Mount1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 800, 0 )
+
+[node name="Sprite" type="Sprite" parent="Mount1"]
+position = Vector2( 0, 225 )
+texture = ExtResource( 3 )
+centered = false
+region_rect = Rect2( 0, 0, 800, 256 )
+
+[node name="Light2D" type="Light2D" parent="Mount1"]
+position = Vector2( 510.17, 341.302 )
+texture = ExtResource( 3 )
+color = Color( 0.313726, 0.721569, 0.368627, 1 )

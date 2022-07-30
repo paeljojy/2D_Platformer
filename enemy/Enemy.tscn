@@ -167,7 +167,6 @@ cast_to = Vector2( 0, 45 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 modulate = Color( 1, 1, 1, 0.685843 )
-emitting = false
 lifetime = 0.5
 one_shot = true
 explosiveness = 0.86
